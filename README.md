@@ -5,16 +5,19 @@ This project implements a question-answering system for dietary guidelines using
 
 1. Clone the repository:
 ```
-git clone https://github.com/your-username/dietary-guidelines-qa.git
-cd dietary-guidelines-qa
+git clone https://github.com/chakraborty-arnab/NutriNudge.git
 ```
-2. Install the required dependencies:
+2. Move into the Folder:
+```
+cd NutriNudge
+```
+3. Install the required dependencies:
 ```
 pip install -r requirements.txt
 ```
-3. Download and install Ollama from [Ollama](https://ollama.com/)
+4. Download and install Ollama from [Ollama](https://ollama.com/)
 
-4. Pull the Llama3 model using Ollama:
+5. Pull the Llama3 model using Ollama:
 ```
 ollama pull llama3
 ```
