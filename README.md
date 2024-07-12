@@ -1,6 +1,8 @@
 # NutriNudge
 This project implements a question-answering system for dietary guidelines using a combination of document embedding, vector search, and language model-based generation.
 
+![App Screenshot](image/app_screenshot.png)
+
 ## Setup
 
 1. Clone the repository:
