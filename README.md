@@ -5,6 +5,8 @@ This project implements a question-answering system for dietary guidelines using
 
 [Read the NutriNudge Report](data/NutriNudge_report.pdf)
 
+[Watch the NutriNudge Demo](https://youtu.be/hdCxrvGKoo4)
+
 ## Setup
 
 1. Clone the repository:
