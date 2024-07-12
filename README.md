@@ -3,6 +3,8 @@ This project implements a question-answering system for dietary guidelines using
 
 ![App Screenshot](image/app_screenshot.png)
 
+[Read the NutriNudge Report](data/NutriNudge_report.pdf)
+
 ## Setup
 
 1. Clone the repository:
