@@ -7,6 +7,28 @@ import faiss
 import numpy as np
 import pickle
 
+# Set page config
+st.set_page_config(page_title="NutriNudge", page_icon="🍎", layout="wide")
+
+# Custom CSS to improve appearance
+st.markdown("""
+    <style>
+    .big-font {
+        font-size:20px !important;
+        font-weight: bold;
+    }
+    .stButton>button {
+        background-color: #4CAF50;
+        color: white;
+        font-size: 18px;
+    }
+    .stExpander {
+        border: 1px solid #4CAF50;
+        border-radius: 5px;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 # Load the FAISS index
 @st.cache(allow_output_mutation=True)
 def load_faiss_index():
@@ -77,17 +99,65 @@ def answer_question(query):
     return response, context
 
 # Streamlit UI
-st.title("Dietary Guidelines Q&A")
+st.title("🍽️ NutriNudge: Dietary Guidelines Q&A")
 
-query = st.text_input("Enter your question about dietary guidelines:")
+st.markdown('<p class="big-font">Ask a question about dietary guidelines:</p>', unsafe_allow_html=True)
+query = st.text_input("", placeholder="e.g., What are the main food groups?")
 
 if st.button("Get Answer"):
     if query:
         with st.spinner("Searching and generating answer..."):
             answer, context = answer_question(query)
             st.subheader("Answer:")
-            st.write(answer)
+            st.info(answer)
             with st.expander("Show Context"):
                 st.write(context)
     else:
         st.warning("Please enter a question.")
+
+st.markdown("---")
+st.markdown("Source: [Dietary Guidelines for Americans 2020-2025](https://www.dietaryguidelines.gov/sites/default/files/2020-12/Dietary_Guidelines_for_Americans_2020-2025.pdf)")
+
+# Add footer
+st.markdown("---")
+
+# Add GitHub and LinkedIn icons
+st.markdown("""
+    <style>
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .social-btn {
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        background-color: #ffffff;
+        color: #000000;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 24px;
+        transition: 0.3s;
+    }
+    .social-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <div class="social-links">
+        <a href="https://github.com/chakraborty-arnab" target="_blank" class="social-btn">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/arnab-chakraborty13/" target="_blank" class="social-btn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+    </div>
+""", unsafe_allow_html=True)
+
+st.markdown("Developed with ❤️ using Ollama, Streamlit and LangChain")
