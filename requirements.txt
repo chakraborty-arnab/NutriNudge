@@ -5,4 +5,7 @@ sentence-transformers
 langchain-community
 opensearch-py
 faiss-cpu
-
+accelerate
+evaluate
+bert_score
+llama-index
