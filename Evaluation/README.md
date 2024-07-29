@@ -13,7 +13,7 @@ Ollama pull phi3
 ```
 ## Detailed Report & Demonstration
 * For a comprehensive analysis of the methodology, improvements, results, and future work, please refer to our [NutriNudge Evaluation Report](https://github.com/chakraborty-arnab/NutriNudge/blob/main/Evaluation/NutriNudge%20Evaluation%20Report.pdf).
-* Video Demonstration: [NutriNudge Evaluation](https://youtu.be/UDnUeKmL6AU)
+* Video Demonstration: [NutriNudge Evaluation Video](https://youtu.be/UDnUeKmL6AU)
 
 ## Key Improvements
 1. Modified prompt for concise answers
