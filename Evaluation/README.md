@@ -11,6 +11,8 @@ Evaluation LLM: Phi3 is used for evaluation as we have used Llama3 to develop ou
 ```
 Ollama pull phi3
 ```
+## Detailed Report
+For a comprehensive analysis of our methodology, improvements, results, and future work, please refer to our [NutriNudge Evaluation Report](https://github.com/chakraborty-arnab/NutriNudge/blob/main/Evaluation/NutriNudge%20Evaluation%20Report.pdf).
 
 ## Key Improvements
 1. Modified prompt for concise answers
@@ -21,5 +23,4 @@ Our improvements led to:
 - Increased accuracy and relevance scores
 - Significant reduction in latency, especially for irrelevant queries
 
-## Detailed Report
-For a comprehensive analysis of our methodology, improvements, results, and future work, please refer to our [NutriNudge Evaluation Report](https://github.com/chakraborty-arnab/NutriNudge/blob/main/Evaluation/NutriNudge%20Evaluation%20Report.pdf).
+
