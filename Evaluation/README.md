@@ -1,11 +1,11 @@
 # NutriNudge Evaluations
-# RAG Application Performance Enhancement
 
 ## Overview
-This project focuses on improving the latency and answer relevance of our Retrieval-Augmented Generation (RAG) application. We implemented and evaluated several methods to enhance the system's performance.
+This project focuses on evaluating the performance and latency of our Retrieval-Augmented Generation (RAG) application: **NutriNudge**. 
+We implemented and evaluated several methods to enhance the system's performance.
 
 ## Key Improvements
-1. Modified prompt engineering for concise answers
+1. Modified prompt for concise answers
 2. Implemented threshold-based retrieval
 
 ## Results
@@ -14,12 +14,6 @@ Our improvements led to:
 - Significant reduction in latency, especially for irrelevant queries
 
 ## Detailed Report
-For a comprehensive analysis of our methodology, improvements, results, and future work, please refer to our [detailed evaluation report](https://link-to-your-report.com).
-
-## Next Steps
-- Implement adaptive thresholding
-- Explore dynamic prompt adjustment
-- Investigate further latency reduction techniques
-- Conduct user testing
+For a comprehensive analysis of our methodology, improvements, results, and future work, please refer to our [NutriNudge Evaluation Report(https://link-to-your-report.com](https://github.com/chakraborty-arnab/NutriNudge/blob/main/Evaluation/NutriNudge%20Evaluation%20Report.pdf).
 
 For more information or to contribute, please contact the project team.
