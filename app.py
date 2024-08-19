@@ -73,6 +73,22 @@ def search_faiss(query, k=3):
     
     return results
 
+def new_search_faiss(query, k=3, threshold=1):
+    query_vector = model.encode([query])[0].astype('float32')
+    query_vector = np.expand_dims(query_vector, axis=0)
+    distances, indices = index.search(query_vector, k)
+    
+    results = []
+    for dist, idx in zip(distances[0], indices[0]):
+        if dist < threshold:  # Only include results within the threshold distance
+            results.append({
+                'distance': dist,
+                'content': sections_data[idx]['content'],
+                'metadata': sections_data[idx]['metadata']
+            })
+    
+    return results
+
 prompt_template = """
 You are an AI assistant specialized in dietary guidelines. Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.
 
@@ -93,9 +109,13 @@ llm = load_llm()
 chain = LLMChain(llm=llm, prompt=prompt)
 
 def answer_question(query):
-    search_results = search_faiss(query)
-    context = "\n\n".join([result['content'] for result in search_results])
-    response = chain.run(context=context, question=query)
+    search_results = new_search_faiss(query)
+    if search_results==[]:
+        response="I don't know. The question is most likely out of context."
+        context = ""
+    else:
+        context = "\n\n".join([result['content'] for result in search_results])
+        response = chain.run(context=context, question=query)
     return response, context
 
 # Streamlit UI
